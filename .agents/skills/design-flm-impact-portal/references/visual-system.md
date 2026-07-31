@@ -1,76 +1,87 @@
 # Sistema visual del portal
 
-## Lectura de diseño
+## Idea rectora
 
-Producto institucional para organizaciones sociales y un equipo evaluador. Lenguaje humano, confiable y deportivo-editorial; inspirado en el propósito público de Fundación Leo Messi, sin presentarse como material oficial.
+**El campo se convierte en sistema.** La geometría deportiva deja de ser ilustración y pasa a ordenar proyectos, estados y decisiones. El resultado debe sentirse como una pieza editorial nocturna que revela un producto digital real.
 
-## Tokens
+## Paleta
 
 | Uso | Token | Valor |
 | --- | --- | --- |
-| Fondo | `--canvas` | `#F4F8FB` |
+| Noche | `--night` | `#020B16` |
+| Noche elevada | `--night-raised` | `#071A2E` |
+| Tinta | `--ink` | `#07192B` |
+| Papel | `--paper` | `#F4F7F8` |
 | Superficie | `--surface` | `#FFFFFF` |
-| Tinta | `--ink` | `#0B2239` |
-| Texto secundario | `--muted` | `#52677A` |
-| Acento | `--accent` | `#5BC0E6` |
-| Acento oscuro | `--accent-strong` | `#067392` |
-| Borde | `--line` | `#D8E4EC` |
-| Éxito semántico | `--success` | `#187A57` |
-| Atención semántica | `--warning` | `#9A5B00` |
-| Error semántico | `--danger` | `#B42318` |
+| Señal | `--signal` | `#63D7FF` |
+| Señal fuerte | `--signal-strong` | `#00A7D6` |
+| Texto nocturno | `--night-copy` | `#C5D5E2` |
+| Texto secundario | `--muted` | `#587083` |
+| Línea | `--line` | `#CFDBE2` |
+| Línea nocturna | `--night-line` | `rgba(136, 211, 239, 0.18)` |
+| Éxito | `--success` | `#127657` |
+| Atención | `--warning` | `#A66200` |
+| Riesgo | `--danger` | `#B42318` |
 
-Usar estados semánticos solo cuando comuniquen estado real. El celeste es el único acento de marca.
+El celeste comunica energía, selección o avance. Los colores semánticos se reservan para estados reales.
 
-## Tipografía y espacio
+## Tipografía
 
-- Familia: Geist Sans; Geist Mono solo para identificadores y cifras.
-- Escala: 14, 16, 20, 28, 44 y 64 px con `clamp()` en títulos.
-- Ancho de lectura: 62 caracteres.
-- Escala espacial: 4, 8, 12, 16, 24, 32, 48, 72.
-- Títulos de hero: máximo tres líneas en móvil y dos en escritorio.
+- Geist Sans para lenguaje, títulos y navegación.
+- Geist Mono para identificadores, cifras, estados y microdatos.
+- Hero: `clamp(3.3rem, 8vw, 7.5rem)`, interlineado entre 0.84 y 0.94 y tracking negativo.
+- Títulos de sección: `clamp(2.4rem, 5vw, 5.5rem)`.
+- Texto de lectura: 16 a 20 px, máximo 62 caracteres.
+- Contrastar palabras enormes con metadatos muy precisos; evitar un tamaño medio uniforme.
 
-## Forma
-
-- Superficies: radio de 18 px.
-- Controles: radio de 10 px.
-- Estados: radio completo.
-- Sombras: una sola sombra azul muy suave; usar bordes antes que elevación.
-
-## Patrones
+## Composición
 
 ### Página pública
 
-- Cabecera de una línea con aviso conceptual visible.
-- Hero asimétrico: promesa a la izquierda y una vista real del flujo a la derecha.
-- Dos acciones como máximo; una primaria.
-- Explicar el recorrido con pasos numerados, no con tres tarjetas genéricas.
+- Cabecera delgada y oscura con aviso conceptual visible.
+- Hero de alto de viewport con copy a la izquierda y escena de decisión a la derecha.
+- Una sola escena producto, construida con capas y geometría; no una captura encerrada en una tarjeta.
+- Franja de señales o resultados entre hero y proceso.
+- Proceso contado con números grandes y una línea de recorrido, no con tres tarjetas iguales.
+- Cambio de ritmo entre secciones oscuras y claras.
 
 ### Formulario
 
-- Progreso explícito con nombre del paso.
-- Una pregunta compleja por bloque.
-- Ayuda contextual debajo del campo.
-- Resumen antes de enviar y confirmación con identificador ficticio.
+- Marco oscuro que aporta contexto y una superficie clara para responder.
+- Progreso legible como secuencia, con el paso actual dominante.
+- Una pregunta compleja por bloque y ayuda persistente.
+- Confirmación con identificador ficticio y siguiente acción.
+- La espectacularidad vive en el marco; los controles siguen siendo sobrios y claros.
 
 ### Panel
 
-- Priorizar cola de trabajo, estado, documentación y puntaje.
-- Tabla en escritorio; lista semántica en móvil.
+- Cabecera de comando oscura que integra contexto, cifras y filtros.
+- Cola de trabajo como superficie dominante.
+- Detalle de evaluación subordinado a la selección activa.
+- Usar densidad, alineación y líneas antes que tarjetas con sombra.
 - Mostrar por qué existe un puntaje y nunca decidir automáticamente.
-- Mantener una acción siguiente clara para cada solicitud.
 
-## Accesibilidad
+## Forma y profundidad
 
-- Contraste WCAG AA mínimo.
-- Foco de 3 px visible y separado del borde.
-- Área interactiva mínima de 44 por 44 px.
-- No depender solo del color.
+- Radios grandes solo en contenedores principales; controles entre 8 y 12 px.
+- Bordes finos, líneas de campo y recortes geométricos antes que sombras blandas.
+- Una sombra profunda y tintada solo para la escena principal.
+- Usar `overflow: clip`, pseudo-elementos y fondos CSS para producir profundidad sin imágenes pesadas.
+- Los estados pueden usar píldoras; las etiquetas comunes no.
+
+## Responsive
+
+- 1440 px: composición asimétrica completa y escena lateral.
+- 768 px: escena debajo del mensaje, métricas en franja compacta.
+- 390 px: título legible en máximo cuatro líneas, CTA visible y escena simplificada.
+- Ocultar capas ambientales secundarias en móvil; nunca esconder información funcional.
+- Ningún elemento puede crear desplazamiento horizontal.
+
+## Accesibilidad y límites
+
+- Contraste WCAG AA y foco visible de 3 px separado del borde.
+- Objetivos interactivos mínimos de 44 por 44 px.
+- No depender solo del color para estados.
 - Respetar `prefers-reduced-motion` y `prefers-contrast`.
-- Usar lenguaje simple, etiquetas persistentes y errores asociados al campo.
-
-## Límites de marca y privacidad
-
-- No descargar ni incorporar logos, firmas, fotos o tipografías propietarias.
-- No insinuar aprobación oficial.
-- No usar datos personales reales; los fixtures deben indicar que son ficticios.
-- No incluir diagnósticos médicos ni información individual de menores.
+- Mantener visible `Propuesta conceptual no oficial`.
+- No usar logotipos, fotografías, firmas ni datos personales reales.

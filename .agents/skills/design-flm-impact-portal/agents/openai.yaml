@@ -1,4 +1,4 @@
 interface:
-  display_name: "FLM Impact Portal Design"
-  short_description: "Diseña una demo institucional clara y humana"
-  default_prompt: "Use $design-flm-impact-portal to design the next portal screen with the project visual system and accessibility guardrails."
+  display_name: "FLM High-Impact Product Design"
+  short_description: "Eleva la demo con dirección visual cinematográfica"
+  default_prompt: "Usa $design-flm-impact-portal para convertir la siguiente pantalla del portal en una experiencia de alto impacto, accesible y navegable."

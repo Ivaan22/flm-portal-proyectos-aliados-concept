@@ -8,8 +8,8 @@ export function SiteHeader() {
         <Link className="brand" href="/" aria-label="Ir al inicio">
           <span className="brand-mark" aria-hidden="true">10</span>
           <span>
-            <strong>Proyectos & Aliados</strong>
-            <small>Demo de producto</small>
+            <strong>Proyectos + Aliados</strong>
+            <small>Concepto digital</small>
           </span>
         </Link>
         <nav className="main-nav" aria-label="Navegación principal">

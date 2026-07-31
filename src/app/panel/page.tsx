@@ -20,20 +20,21 @@ export default async function PanelPage({ searchParams }: PanelPageProps) {
 
   return (
     <main className="panel-page shell">
-      <div className="panel-heading">
-        <div>
-          <p className="eyebrow">Mesa de evaluación</p>
-          <h1>Propuestas activas</h1>
-          <p>Todo lo necesario para revisar, pedir información y dejar una próxima acción.</p>
+      <section className="panel-command">
+        <div className="panel-heading">
+          <div>
+            <p className="section-index mono">02 / MESA DE EVALUACIÓN</p>
+            <h1>Decidir con<br /><span>todo el contexto.</span></h1>
+            <p>Revisar, pedir información y dejar una próxima acción sin perder el hilo.</p>
+          </div>
+          <Link className="button button-primary" href="/presentar">Nueva solicitud <span aria-hidden="true">↗</span></Link>
         </div>
-        <Link className="button button-primary" href="/presentar">Nueva solicitud demo</Link>
-      </div>
-
-      <div className="panel-stats" aria-label="Resumen de la cola">
-        <div><span>Activas</span><strong>12</strong><small>3 nuevas esta semana</small></div>
-        <div><span>Requieren acción</span><strong>4</strong><small>Documentación o resguardo</small></div>
-        <div><span>Tiempo medio</span><strong>6 d</strong><small>Desde recepción a decisión</small></div>
-      </div>
+        <div className="panel-stats" aria-label="Resumen de la cola">
+          <div><span>Activas</span><strong>12</strong><small>3 nuevas esta semana</small></div>
+          <div><span>Requieren acción</span><strong>04</strong><small>Documentación o resguardo</small></div>
+          <div><span>Tiempo medio</span><strong>06d</strong><small>Recepción a decisión</small></div>
+        </div>
+      </section>
 
       {saved === "1" ? (
         <div className="saved-notice" role="status">
