@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { calculateEvaluationScore } from "@/lib/evaluation";
 import { projectFixtures } from "@/lib/projects";
 
@@ -117,16 +118,40 @@ export default function Home() {
               <span className="mono">01</span>
               <div><p>Salud</p><h3>Una prioridad de todos.</h3></div>
               <p>Fortalecer sistemas sanitarios, capacitar especialistas y acompañar investigación sobre enfermedades prevalentes de la infancia.</p>
+              <figure className="pillar-visual">
+                <Image
+                  src="/media/foundation/health-research.png"
+                  alt="Representación conceptual de investigación sanitaria pediátrica"
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 1120px) 36vw, 220px"
+                />
+              </figure>
             </li>
             <li>
               <span className="mono">02</span>
               <div><p>Educación</p><h3>Un derecho fundamental.</h3></div>
               <p>Impulsar conocimientos, competencias, actitudes y valores que permitan construir un futuro sostenible y más igualitario.</p>
+              <figure className="pillar-visual">
+                <Image
+                  src="/media/foundation/education-kits.png"
+                  alt="Representación conceptual de materiales educativos preparados para una actividad"
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 1120px) 36vw, 220px"
+                />
+              </figure>
             </li>
             <li>
               <span className="mono">03</span>
               <div><p>Deporte</p><h3>Una herramienta de inclusión.</h3></div>
               <p>Promover actividad física, infraestructura y formación como caminos de integración, compañerismo y respeto por las diferencias.</p>
+              <figure className="pillar-visual">
+                <Image
+                  src="/media/foundation/inclusive-sport.png"
+                  alt="Representación conceptual de una práctica de fútbol inclusivo"
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 1120px) 36vw, 220px"
+                />
+              </figure>
             </li>
           </ol>
 
@@ -153,12 +178,20 @@ export default function Home() {
         <div className="shell public-partners" aria-label="Partners publicados en el sitio de Fundación Leo Messi">
           <p className="mono">PARTNERS PUBLICADOS</p>
           <ul>
-            <li>adidas</li>
-            <li>UNICEF</li>
-            <li>Fundación FC Barcelona</li>
-            <li>Grupo Sancor Seguros</li>
+            <li>
+              <Image className="partner-logo partner-logo-adidas" src="/partners/adidas.png" alt="adidas" width={148} height={100} />
+            </li>
+            <li>
+              <Image className="partner-logo partner-logo-unicef" src="/partners/unicef.png" alt="UNICEF" width={184} height={46} />
+            </li>
+            <li>
+              <Image className="partner-logo partner-logo-fcb" src="/partners/fundacio-fc-barcelona.png" alt="Fundació FC Barcelona" width={174} height={69} />
+            </li>
+            <li>
+              <Image className="partner-logo partner-logo-sancor" src="/partners/grupo-sancor-seguros.png" alt="Grupo Sancor Seguros" width={184} height={67} />
+            </li>
           </ul>
-          <small>Referencias visibles en la sección pública de partners de la Fundación.</small>
+          <small>Referencias públicas de partners de la Fundación · uso visual dentro de una propuesta conceptual no oficial.</small>
         </div>
       </section>
 
