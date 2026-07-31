@@ -92,9 +92,79 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="foundation-profile" aria-labelledby="foundation-profile-title">
+        <div className="foundation-profile-orbit" aria-hidden="true" />
+        <div className="shell foundation-profile-head">
+          <div className="foundation-year">
+            <span className="mono">Desde</span>
+            <strong className="mono">2007</strong>
+            <small>Argentina · Alcance internacional</small>
+          </div>
+          <div>
+            <p className="section-index mono">02 / LA FUNDACIÓN EN CONTEXTO</p>
+            <h2 id="foundation-profile-title">Una misión.<br /><span>Tres formas de abrir oportunidades.</span></h2>
+            <p className="foundation-mission">
+              La Fundación Leo Messi es una entidad sin fines de lucro que actúa en favor de
+              niñas, niños y adolescentes en situación de riesgo, junto a instituciones que
+              desarrollan proyectos de salud, educación y deporte.
+            </p>
+          </div>
+        </div>
+
+        <div className="shell foundation-profile-body">
+          <ol className="pillar-ledger">
+            <li>
+              <span className="mono">01</span>
+              <div><p>Salud</p><h3>Una prioridad de todos.</h3></div>
+              <p>Fortalecer sistemas sanitarios, capacitar especialistas y acompañar investigación sobre enfermedades prevalentes de la infancia.</p>
+            </li>
+            <li>
+              <span className="mono">02</span>
+              <div><p>Educación</p><h3>Un derecho fundamental.</h3></div>
+              <p>Impulsar conocimientos, competencias, actitudes y valores que permitan construir un futuro sostenible y más igualitario.</p>
+            </li>
+            <li>
+              <span className="mono">03</span>
+              <div><p>Deporte</p><h3>Una herramienta de inclusión.</h3></div>
+              <p>Promover actividad física, infraestructura y formación como caminos de integración, compañerismo y respeto por las diferencias.</p>
+            </li>
+          </ol>
+
+          <aside className="foundation-proof" aria-labelledby="proof-title">
+            <p className="mono">ACCIONES PUBLICADAS</p>
+            <h3 id="proof-title">Impacto que ya tiene nombre propio.</h3>
+            <div className="proof-list">
+              <article><span className="mono">SALUD · 2022</span><h4>SJD Pediatric Cancer Center Barcelona</h4><p>Participación como donante fundador del centro monográfico de oncología pediátrica.</p></article>
+              <article><span className="mono">EDUCACIÓN · 2020</span><h4>UNICEF · Siria</h4><p>Kits educativos distribuidos para 50.630 niñas y niños en nueve provincias.</p></article>
+              <article><span className="mono">INCLUSIÓN · 2021</span><h4>Special Olympics Catalunya</h4><p>Deporte, aprendizaje y desarrollo para jóvenes con discapacidad intelectual.</p></article>
+            </div>
+          </aside>
+        </div>
+
+        <div className="shell foundation-portal-bridge">
+          <div>
+            <p className="mono">POR QUÉ ESTE PORTAL</p>
+            <h3>Cada acción empieza con una propuesta y crece con aliados.</h3>
+          </div>
+          <p>El portal ordena instituciones, objetivos, documentación, alcance y próxima acción para convertir una oportunidad en un proyecto evaluable.</p>
+          <a href="https://messi.com/fundacion-leo-messi/" target="_blank" rel="noreferrer">Consultar información institucional <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div className="shell public-partners" aria-label="Partners publicados en el sitio de Fundación Leo Messi">
+          <p className="mono">PARTNERS PUBLICADOS</p>
+          <ul>
+            <li>adidas</li>
+            <li>UNICEF</li>
+            <li>Fundación FC Barcelona</li>
+            <li>Grupo Sancor Seguros</li>
+          </ul>
+          <small>Referencias visibles en la sección pública de partners de la Fundación.</small>
+        </div>
+      </section>
+
       <section className="journey-section">
         <div className="shell journey-heading">
-          <p className="section-index mono">02 / RECORRIDO</p>
+          <p className="section-index mono">03 / RECORRIDO</p>
           <h2>Menos ruido.<br /><span>Más contexto para decidir.</span></h2>
         </div>
         <div className="shell journey-grid">
@@ -112,7 +182,7 @@ export default function Home() {
 
       <section className="closing-section">
         <div className="shell closing-cta">
-          <p className="section-index mono">03 / DEMO NAVEGABLE</p>
+          <p className="section-index mono">04 / DEMO NAVEGABLE</p>
           <h2>Una propuesta<br />que ya se puede probar.</h2>
           <Link className="button button-primary" href="/presentar">Recorrer experiencia <span aria-hidden="true">↗</span></Link>
         </div>
