@@ -613,49 +613,100 @@ a {
   transform: rotate(90deg);
 }
 
-/* Signal strip and journey */
+/* Foundation reference and journey */
 
-.signal-strip {
+.foundation-band {
   border-bottom: 1px solid #173348;
-  background: #061522;
+  background:
+    linear-gradient(110deg, rgba(99, 215, 255, 0.045), transparent 48%),
+    #0a1c30;
   color: #fff;
 }
 
-.signal-grid {
-  min-height: 116px;
+.foundation-band-grid {
+  min-height: 178px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  grid-template-columns: minmax(330px, 1.15fr) minmax(260px, 0.85fr) minmax(330px, 1fr);
   align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
 }
 
-.signal-grid > div {
+.foundation-lockup {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  border-left: 1px solid var(--night-line);
-  padding: 1.3rem 1.7rem;
+  align-items: center;
+  gap: 1rem;
 }
 
-.signal-grid strong {
+.foundation-ten {
+  width: 66px;
+  height: 66px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(99, 215, 255, 0.55);
+  border-radius: 50%;
   color: var(--signal);
+  font-size: 1.1rem;
+  box-shadow: inset 0 0 28px rgba(99, 215, 255, 0.08), 0 0 34px rgba(99, 215, 255, 0.07);
+}
+
+.foundation-lockup small,
+.foundation-lockup strong {
+  display: block;
+}
+
+.foundation-lockup small {
+  margin-bottom: 0.35rem;
+  color: #7f9caf;
   font-family: var(--font-mono);
-  font-size: clamp(1.8rem, 3vw, 2.9rem);
-  font-weight: 500;
-  letter-spacing: -0.08em;
+  font-size: 0.58rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
 }
 
-.signal-grid span {
-  max-width: 90px;
-  color: #9fb4c3;
-  font-size: 0.72rem;
-  line-height: 1.35;
+.foundation-lockup strong {
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 590;
+  letter-spacing: -0.045em;
 }
 
-.signal-grid > p {
+.foundation-lockup em {
+  color: var(--signal);
+  font-style: normal;
+  font-weight: 590;
+}
+
+.foundation-band-grid > p {
   margin: 0;
-  color: #557387;
-  font-size: 0.56rem;
-  letter-spacing: 0.12em;
+  color: #9fb4c3;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.foundation-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  border-left: 1px solid var(--night-line);
+  padding: 0;
+  list-style: none;
+}
+
+.foundation-pillars li {
+  min-height: 70px;
+  display: grid;
+  align-content: center;
+  gap: 0.4rem;
+  border-right: 1px solid var(--night-line);
+  padding: 0 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.foundation-pillars span {
+  color: var(--signal);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
 }
 
 .journey-section {
@@ -1598,12 +1649,13 @@ td a > span {
     display: none;
   }
 
-  .signal-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .foundation-band-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-block: 1.8rem;
   }
 
-  .signal-grid > p {
-    display: none;
+  .foundation-pillars {
+    grid-column: 1 / -1;
   }
 
   .workspace-grid {
@@ -1787,23 +1839,30 @@ td a > span {
     display: none;
   }
 
-  .signal-grid {
-    min-height: 94px;
-    grid-template-columns: repeat(3, 1fr);
+  .foundation-band-grid {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    padding-block: 2.2rem;
   }
 
-  .signal-grid > div {
-    display: grid;
-    gap: 0.15rem;
-    padding: 1rem 0.6rem;
+  .foundation-ten {
+    width: 54px;
+    height: 54px;
   }
 
-  .signal-grid strong {
-    font-size: 1.7rem;
+  .foundation-band-grid > p {
+    max-width: 350px;
   }
 
-  .signal-grid span {
-    font-size: 0.58rem;
+  .foundation-pillars {
+    grid-column: auto;
+  }
+
+  .foundation-pillars li {
+    min-height: 62px;
+    padding-inline: 0.65rem;
+    font-size: 0.68rem;
   }
 
   .journey-section {

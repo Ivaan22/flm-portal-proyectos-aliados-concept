@@ -18,7 +18,7 @@ export default function Home() {
 
         <div className="shell hero-stage">
           <div className="hero-copy">
-            <p className="hero-kicker"><span>01</span> Portal de proyectos y aliados</p>
+            <p className="hero-kicker"><span>01</span> Concepto para Fundación Leo Messi</p>
             <h1>Del proyecto<br /><span>a la decisión.</span></h1>
             <p className="hero-text">
               Una puerta digital para presentar, ordenar y evaluar iniciativas de salud,
@@ -74,12 +74,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="signal-strip" aria-label="Resumen de la demostración">
-        <div className="shell signal-grid">
-          <div><strong>03</strong><span>áreas de impacto</span></div>
-          <div><strong>12</strong><span>propuestas activas</span></div>
-          <div><strong>06d</strong><span>tiempo medio de revisión</span></div>
-          <p className="mono">DATOS DEMO / NO OFICIALES</p>
+      <section className="foundation-band" aria-label="Referencia conceptual a Fundación Leo Messi">
+        <div className="shell foundation-band-grid">
+          <div className="foundation-lockup">
+            <span className="foundation-ten mono" aria-hidden="true">10</span>
+            <span>
+              <small>Concepto digital para</small>
+              <strong>Fundación <em>Leo Messi</em></strong>
+            </span>
+          </div>
+          <p>Una puerta común para iniciativas que buscan mejorar oportunidades para niñas, niños y adolescentes.</p>
+          <ul className="foundation-pillars" aria-label="Áreas de trabajo">
+            <li><span className="mono">01</span> Salud</li>
+            <li><span className="mono">02</span> Educación</li>
+            <li><span className="mono">03</span> Deporte</li>
+          </ul>
         </div>
       </section>
 
